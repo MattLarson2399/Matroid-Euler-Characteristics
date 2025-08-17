@@ -14,9 +14,13 @@ The code can be used to compute Euler characteristics of tensor powers of these 
 For instance, Example 5.7 in "K-theoretic positivity for matroids" states that the h^*(M, U_{n, n+1}) is the h-vector of the broken circuit complex of M. The following code verified this for the Fano matroid.
 
 A = Matrix(GF(2), [[1,0,0,1,1,0,1],[0,1,0,1,0,1,1],[0,0,1,0,1,1,1]])
+
 M = Matroid(A)
+
 N = matroids.Uniform(6,7)
+
 hstarMN(M, N)
+
 M.broken_circuit_complex().h_vector()
 
 
